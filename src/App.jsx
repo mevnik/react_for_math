@@ -29,7 +29,7 @@ const onClick = (result) => {
   setQuantity((prev) => {return prev+1})
   console.log(isRightResult.toString())
 }
-useEffect((isRightResult) => {
+useEffect(() => {
 //console.log('render')
   if(isRightResult) {
     setNumber1(first_number_Chloe())
@@ -37,7 +37,7 @@ useEffect((isRightResult) => {
     setRightQuantity((prev) => {return prev+1})
     setSign(sign_Chloe())
   }
-},[quantity])
+},[quantity,isRightResult])
 
   return (
     <>

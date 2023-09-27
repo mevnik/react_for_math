@@ -1,7 +1,8 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css'
 
@@ -10,6 +11,11 @@ import '../App.css'
 function MainField(props) {
   const[result,setResult] = useState(props.result)
   const [value, setValue] = useState('')  
+
+
+  useEffect(() => {
+    setValue('')
+  },[props.level])
 
     const onClick = (e) => {
       props.onClick(result)
@@ -32,29 +38,31 @@ function MainField(props) {
 
   return (
     <>
-     <Container>
-      <Row>
-        <Col  md={3}>
-          <div className="border border-success text-center d-block mt-2">{props.number1}</div>
+     <Container >
+      <Row className = "d-flex justify-content-center">
+        <Col md={3}>
+          <div className="border border-dark-subtle text-center d-block mt-2">{props.number1}</div>
         </Col>
-        <Col  md={1}>
-          <div className="border border-success text-center mt-2">{props.sign}</div>
+        <Col xs = {3} md={1}>
+          <div className="text-center mt-2 ">{props.sign}</div>
 
         </Col>
-        <Col  md={3}>
-          <div className="border border-success text-center mt-2">{props.number2}</div>
+        <Col md={3}>
+          <div className="border border-dark-subtle text-center mt-2">{props.number2}</div>
 
         </Col>
-        <Col  md={1}>
-          <div className="border border-success text-center mt-2">=</div>
+        <Col  xs = {3} md={1}>
+          <div className=" text-center mt-2">=</div>
 
         </Col>
         <Col md={4}>
 
           <div className="mb-3 text-center last" >
-            <input type="text" className="border border-success text-center mt-2"  id="InputResult" placeholder="Enter Result" 
-             value = {value} onChange={onChange}/>
-          <button type="submit" className="btn btn-primary mt-2" onClick = {onClick}>Submit</button>
+
+            <input type="text" className="border border-dark-subtle text-center mt-2"  id="InputResult" placeholder="Enter Result" 
+             value = {value} onChange={onChange} autocomplete = "off"/>
+          <Button variant="info" className="btn btn-primary mt-3 border border-dark rounded-pill" onClick = {onClick}>Submit</Button>
+
           </div>
 
         </Col>

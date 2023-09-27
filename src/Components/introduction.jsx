@@ -36,7 +36,7 @@ const chooseLevel = (e) => {
       <Row className = "mb-3 ">
         <Col xs={4} md={4} className = "intraduction_col">
           <div>
-            <Button variant="success" onClick = {upLevel} name = 'test'>Up Level</Button>
+            <Button variant="success" onClick = {upLevel} className = "h-100">Up Level</Button>
           </div>
         </Col>
         <Col xs={4} md={4} className = "d-flex flex-column ">
@@ -63,7 +63,7 @@ const chooseLevel = (e) => {
         </Col>
         <Col xs={4} md={4} className = "intraduction_col">
             <div>
-              <Button variant="success" onClick = {downLevel}>Down Level</Button>
+              <Button variant="success" onClick = {downLevel} className = "h-100">Down Level</Button>
             </div>
         </Col>
       </Row>

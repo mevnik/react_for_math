@@ -39,23 +39,23 @@ function MainField(props) {
   return (
     <>
      <Container >
-      <Row className = "d-flex justify-content-center">
-        <Col md={3}>
+      <Row >
+        <Col xs = {3} md={3}>
           <div className="border border-dark-subtle text-center d-block mt-2">{props.number1}</div>
         </Col>
-        <Col xs = {3} md={1}>
+        <Col xs = {1} md={1}>
           <div className="text-center mt-2 ">{props.sign}</div>
 
         </Col>
-        <Col md={3}>
+        <Col xs = {3} md={3}>
           <div className="border border-dark-subtle text-center mt-2">{props.number2}</div>
 
         </Col>
-        <Col  xs = {3} md={1}>
+        <Col xs = {1} md={1}>
           <div className=" text-center mt-2">=</div>
 
         </Col>
-        <Col md={4}>
+        <Col xs = {4} md={4}>
 
           <div className="mb-3 text-center last" >
 

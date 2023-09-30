@@ -7,19 +7,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import {Levels} from '../assets/exercises';
 
 function Introduction(props) {
 
-const Levels = [
-  {id:1,text:"lev 1:  '-,+' < 10"},
-  {id:2,text:"lev 2:  '-,+' < 100"},
-  {id:3,text:'lev 3:  * < 100'},
-  {id:4,text:'lev 4:  * < 700'},
-  {id:5,text:'lev 5:  * < 1000'},
-  {id:6,text:'lev 6:  / < 1000'},
-  ]
 
-const upLevel = (e) => {
+
+const upLevel = () => {
   props.upLevel()
 }
 
@@ -28,7 +22,7 @@ const downLevel = () => {
 }
 
 const chooseLevel = (e) => {
-  props.chooseLevel(Number(e.target.name))
+  props.chooseLevel(e.target.name)
 }
 
   return (

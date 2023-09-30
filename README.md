@@ -10,3 +10,11 @@ Netlify автоматически обновляет deploy после изме
 Netlify интересная штука
 У меня на FastVps создан back_end для telegram bot test_mevnik
 Там прописал url https://bright-parfait-0208bc.netlify.app (для этого внес изменения у себя в проект, спушил на git и по ssh спулил с гита на Fastvps)и после этого по кнопке "go to shop" открывается мой сайт
+
+Emoji:
+https://getemoji.com/assets/#smileys
+копируем нужный и вставляем
+---------------
+Важно, т.к. Floating point arithmetic is not always 100% accurate, при работе с дробями применять toFixed(n) или *10/10 и сравнивать не === а ==;
+https://www.w3schools.com/js/js_numbers.asp#gsc.tab=0
+---------------

@@ -58,3 +58,10 @@ display:flex;
 .drop_box{
   width:100%;
 }
+
+.emoji{
+  font-size:200%;
+}
+.red_text{
+  color:red;
+}

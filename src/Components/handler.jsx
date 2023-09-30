@@ -20,12 +20,12 @@ function Handler(props) {
           </div>
         </Col>
         <Col xs={4} md={4} className=" text-center mb-4">
-          <div className=" text-center">
+          <div className=" text-center emoji">
             {info}
           </div>
         </Col>
         <Col xs={4} md={4} className=" text-center mb-4">
-          <div className=" text-center border border-dark rounded-pill fw-bold fs-2">
+          <div className=" text-center border border-dark rounded-pill fw-bold fs-2 red_text">
             {props.rightQuantity}
           </div>
         </Col>

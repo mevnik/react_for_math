@@ -8,41 +8,41 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/header'
 import MainField from './Components/main_field'
 import Handler from './Components/handler'
+import {Footer} from './Components/footer'
 import Introduction from './Components/introduction'
 import {right_res,getTask} from './assets/library'
 
 
 
+
 function App() {
+
   const [level,setLevel] = useState(1)
   const [task,setTask] = useState(() => {return getTask(level)})
-
   const [isRightResult,setIsRightResult] = useState(false)
   const [showResult,setShowResult] = useState(false)
   const [quantity,setQuantity] = useState(0)
   const [rightQuantity,setRightQuantity] = useState(0)
 
 useEffect(() => {
+
 },[])
 
 
 
 const onClick = (result) => {
-const whatResult = right_res(task[0],task[1],task[2],Number(result))
+  const whatResult = right_res(task[0],task[1],task[2],Number(result))
   setIsRightResult(whatResult)
   setShowResult(true)
   setQuantity((prev) => {return prev+1})
   if(whatResult) {
-
     setRightQuantity((prev) => {return prev+1})
-}
+  }
 }
 
 useEffect(() => {
   if(isRightResult) {
     setTask(() => {return getTask(level)})
-//    setRightQuantity((prev) => {return prev+1})
-
   }
 },[quantity,isRightResult,level])
 
@@ -54,11 +54,8 @@ useEffect(() => {
 },[level])
 
 const upLevel = () => {
-
-  setLevel((prev) => {
-    return prev+1
-  })
-}
+  setLevel((prev) => { return prev+1})
+  }
 
 const downLevel = () => {
   
@@ -72,8 +69,7 @@ const downLevel = () => {
 }
 
 const chooseLevel = (level) => {
-  setLevel(level)
-
+  setLevel(Number(level))
 }
 
   return (
@@ -86,9 +82,9 @@ const chooseLevel = (level) => {
         <Col>
           <MainField number1 = {task[0]} number2 = {task[1]} number3 = {3} sign = {task[2]} onClick = {onClick} level = {level}/>
           <p></p>
-          <p></p>
         </Col>
       </Row>
+      <Footer/>
     </Container>
 </Container>
   )

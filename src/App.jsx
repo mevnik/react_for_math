@@ -54,8 +54,13 @@ useEffect(() => {
 },[level])
 
 const upLevel = () => {
-  setLevel((prev) => { return prev+1})
-  }
+  setLevel((prev) => { 
+    if (prev < 10){  
+        return prev + 1
+      }
+      else return 1;
+  })
+}
 
 const downLevel = () => {
   
@@ -63,7 +68,7 @@ const downLevel = () => {
       if (prev > 1){  
         return prev-1
       }
-      else setLevel(1)
+      else return 1;
     })
 
 }

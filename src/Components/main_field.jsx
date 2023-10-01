@@ -59,7 +59,7 @@ function MainField(props) {
 
           <div className="mb-3 text-center last" >
 
-            <input type="text" className="border border-dark-subtle text-center mt-2"  id="InputResult" placeholder="Enter Result" 
+            <input type="number" className="border border-dark-subtle text-center mt-2"  id="InputResult" placeholder="Enter Result" 
              value = {value} onChange={onChange} autoComplete = "off"/>
           <Button variant="info" className="btn btn-primary mt-3 border border-dark rounded-pill" onClick = {onClick}>Submit</Button>
 

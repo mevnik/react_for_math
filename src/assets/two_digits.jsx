@@ -15,17 +15,7 @@ const generate_Arr_Second_numbers = (first_number) => {
   }
   return arr;
 }
-/*
-const find_Second_number = (first_number) => {
-    let second_number = 1;
-    do {
-      second_number = Math.ceil(Math.random() * (first_number-1));
-    }
-      while(first_number%second_number !== 0) 
-    return second_number;
 
-}
-*/
 function getSample(arr){
   const indx = Math.floor(Math.random() * arr.length);
 return arr[indx]

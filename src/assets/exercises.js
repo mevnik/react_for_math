@@ -9,5 +9,7 @@ export const Levels = [
   {id:8,text:"lev 8   * , /   mix <1000",ceil:8,floor:5},
   {id:9,text:"lev 9  -,+  decimal <100",ceil:10,floor:9},
   {id:10,text:"lev 10  * decimal <100",ceil:11,floor:10},
+  {id:11,text:"lev 11  fractions", ceil:12,floor:11},
+  {id:12,text:"lev 12  < or >", ceil:12,floor:11},
 
   ]

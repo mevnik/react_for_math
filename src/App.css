@@ -65,6 +65,27 @@ display:flex;
 .red_text{
   color:red;
 }
+
+.fraction{
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  
+}
+.cursor{
+  cursor: pointer;
+  outline: none;
+}
+.cursor:hover {
+    background-color: #2ecc71;
+    color: red;
+    opacity: 1;
+}
+b {
+  color: grey;
+}
+
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none; 

@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/header'
 import MainField from './Components/main_field'
+import MainField3 from './Components/main_field3'
 import Handler from './Components/handler'
 import {Footer} from './Components/footer'
 import Introduction from './Components/introduction'
@@ -24,6 +25,7 @@ function App() {
   const [quantity,setQuantity] = useState(0)
   const [rightQuantity,setRightQuantity] = useState(0)
 
+
 useEffect(() => {
 
 },[])
@@ -31,7 +33,23 @@ useEffect(() => {
 
 
 const onClick = (result) => {
-  const whatResult = right_res(task[0],task[1],task[2],Number(result))
+  let whatResult;
+  switch(level){
+  case 11: {
+    let indxSlash = result.indexOf('/')
+    let numerator = result.slice(0,indxSlash)
+    let denumirator = result.slice(indxSlash + 1)
+   whatResult = right_res(Number(task[0][0])/Number(task[0][2]),Number(task[1][0])/Number(task[1][2]),task[2],Number(numerator)/Number(denumirator))
+  }
+    break;
+
+  case 12: whatResult = result
+    break;
+
+  default: whatResult = right_res(task[0],task[1],task[2],Number(result))
+  }
+
+
   setIsRightResult(whatResult)
   setShowResult(true)
   setQuantity((prev) => {return prev+1})
@@ -73,6 +91,10 @@ const downLevel = () => {
 
 }
 
+
+// убрать пропс намбер3
+
+
 const chooseLevel = (level) => {
   setLevel(Number(level))
 }
@@ -85,7 +107,11 @@ const chooseLevel = (level) => {
       <Handler isRightResult = {isRightResult} showResult = {showResult} quantity = {quantity} rightQuantity = {rightQuantity}/>
       <Row>
         <Col>
-          <MainField number1 = {task[0]} number2 = {task[1]} number3 = {3} sign = {task[2]} onClick = {onClick} level = {level}/>
+        {(level === 12)?
+          <MainField3 number1 = {task[0]} number2 = {task[1]} sign = {task[2]} onClick = {onClick} level = {level}/>
+          :
+          <MainField number1 = {task[0]} number2 = {task[1]} sign = {task[2]} onClick = {onClick} level = {level}/>
+        }
           <p></p>
         </Col>
       </Row>

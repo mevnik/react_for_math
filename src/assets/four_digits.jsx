@@ -63,7 +63,4 @@ return second_number;
 
 }
 
-function test(){
-  let fraction = get_Fraction()
-}
 

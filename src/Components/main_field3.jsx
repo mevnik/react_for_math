@@ -28,7 +28,7 @@ function MainField3(props) {
     <>
      <Container >
       <Row >
-        <Col xs = {2} md={2}>
+        <Col xs = {3} md={3}>
           <div className="mb-3 text-center last" >
 
 
@@ -42,7 +42,7 @@ function MainField3(props) {
           </div>
 
         </Col>
-        <Col xs = {2} md={2}>
+        <Col xs = {3} md={3}>
           <div className="mb-3 text-center last" >
 
 
@@ -55,7 +55,7 @@ function MainField3(props) {
           <div className=" text-center mt-2"></div>
 
         </Col>
-        <Col xs = {6} md={6}>
+        <Col xs = {4} md={4}>
 
           <div className="border border-success bg-light text-dark mb-3 mt-2 text-center last" >
 

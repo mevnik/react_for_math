@@ -12,6 +12,7 @@ import Handler from './Components/handler'
 import {Footer} from './Components/footer'
 import Introduction from './Components/introduction'
 import {right_res,getTask} from './assets/library'
+import {Levels} from './assets/exercises'
 
 
 
@@ -73,7 +74,7 @@ useEffect(() => {
 
 const upLevel = () => {
   setLevel((prev) => { 
-    if (prev < 10){  
+    if (prev < Levels.length){  
         return prev + 1
       }
       else return 1;

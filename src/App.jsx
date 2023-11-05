@@ -13,7 +13,7 @@ import {Footer} from './Components/footer'
 import Introduction from './Components/introduction'
 import {right_res,getTask} from './assets/library'
 import {Levels} from './assets/exercises'
-import {Color2} from './config.js'
+import {Color2} from './constants.jsx'
 
 
 

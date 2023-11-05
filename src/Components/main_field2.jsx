@@ -54,7 +54,6 @@ const Count = (e) => {
     let tmp1 = choosen // добавляем в set выбранных
     tmp1.add(indexCel)
     setChoosen(tmp1)
-    console.log('size after + click='+choosen.size)
 
     }
   else {
@@ -62,7 +61,6 @@ const Count = (e) => {
     let tmp2 = choosen // удаляем из set-а выбранных
     tmp2.delete(indexCel)
     setChoosen(tmp2)
-    console.log('size after - click='+choosen.size)
      
   }
   
@@ -75,11 +73,9 @@ const changeRowColor =(e) => {
   const indxRow = IdRow.slice(0,indxSlash)
   const indexRow = 'row/' + indxRow
   const rowLength = IdRow.slice(indxSlash + 1)
-    console.log('clickRow'+clickRow)
 
     let tmp = choosen // заполняем массив выбранных
     tmp.forEach((item) => {
-    console.log('choosen'+item)
 
     })
     let tempClickRow = clickRow
@@ -112,7 +108,6 @@ else {
 
        }
     setChoosen(tmp)
-    console.log('size after + row='+choosen.size)
 
 }
 
@@ -124,12 +119,9 @@ const changeColumnColor =(e) => {
   const indxCol = IdCol.slice(0,indxSlash)
   const indexCol = 'col/' + indxCol
   const colLength = IdCol.slice(indxSlash + 1)
-    console.log('clickCol='+clickCol)
-    console.log('colLength'+IdCol)
 
     let tmp = choosen // заполняем массив выбранных
     tmp.forEach((item) => {
-    console.log('choosen'+item)
 
     })
 
@@ -140,7 +132,6 @@ if(!tempClickCol.has(indexCol)){
 
   for(let i = 0; i < colLength; i++){
       let indexCel = i.toString() + '/' + indxCol.toString()
-    console.log('indexCel'+indexCel)
 
       let el = document.getElementById(indexCel)
       el.style.backgroundColor = Color1 //меняем цвет всех ячеек ряда
@@ -168,7 +159,6 @@ else {
 
        }
     setChoosen(tmp)
-    console.log('size after + row='+choosen.size)
 
 }
 

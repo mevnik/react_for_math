@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/header'
 import MainField from './Components/main_field'
-import MainField2 from './Components/main_field2_temp'
+import MainField2 from './Components/main_field2'
 import Handler from './Components/handler'
 import {Footer} from './Components/footer'
 import Introduction from './Components/introduction'
@@ -30,8 +30,6 @@ function App() {
 
   useEffect(() => {
   setColor(Color2)
-
-  console.log('effectEFFECT')
   },[])
 
   const onSubmit = (result) => {
@@ -45,7 +43,6 @@ function App() {
   }
 
   const onClick = (result) => {
-  console.log('onClick')
 
     let whatResult;
     switch(level){
@@ -78,7 +75,6 @@ function App() {
 }
 
 useEffect(() => {
-  console.log('EFFECT_OTHER= level'+level + 'quantity' + quantity + 'isRightResult' + isRightResult)
 
   if(isRightResult) {
 
@@ -89,8 +85,6 @@ useEffect(() => {
 },[quantity,isRightResult,level])
 
 useEffect(() => {
-  console.log('EFFECTlev='+level)
-
     setTask(() => {return getTask(level)})
     setRightQuantity(0)
     setQuantity(0)

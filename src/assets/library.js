@@ -41,6 +41,7 @@ export function getTask(level){
        const range = levelRange(level)
 
 		const exercise = Math.floor(Math.random() * (range[0]-range[1])) + range[1];
+
 		//здесь мы для некоторых уровней упражнение выбираем случайным образом из нескольких возможных
 
 if(exercise === 11){
@@ -51,6 +52,10 @@ if(exercise === 11){
 
 }
 
+if(exercise === 13){
+	return (getTask_13())
+}
+
 		result = get_Result(exercise)
 		//first_number = get_First_Number(exercise,result)
 		first_number = get_First_Number(exercise)
@@ -58,6 +63,41 @@ if(exercise === 11){
 		second_number = get_Second_Number(result,sign,first_number,exercise)
 		return [first_number,second_number,sign]
 
+}
+
+function getTask_13(){
+  const lenthY = Math.ceil(Math.random()*12)
+	const lenthX = Math.ceil(Math.random()*10 + 2) // min 2 column
+  let sumSquares = lenthX*lenthY
+  let part = Math.ceil(Math.random()*(sumSquares-1))
+  for(let i = 9;i>0; i--){
+
+  	if(Number.isInteger(sumSquares/i) && Number.isInteger(part/i) ){
+
+
+  		sumSquares = sumSquares/i
+  		part = part/i
+  	}
+  }
+  let proportion = part.toString()+'/' + sumSquares.toString()
+  let arrX =[]
+  let arrY =[]
+  for(let i = 0;i < lenthX; i++){
+    arrX.push(i)
+  }
+  
+  for(let i = 0;i < lenthY; i++){
+    arrY.push(arrX)
+  }
+
+
+  let h = 30*12/lenthX
+  let H = h.toString()+'px'
+
+  let w = 33*12/lenthX
+  let W = w.toString()+'px'
+
+  return [arrY, H, W, proportion]
 }
 
 

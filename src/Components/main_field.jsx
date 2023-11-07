@@ -97,9 +97,17 @@ function MainField(props) {
 
         :
           <>
-            <input type="text" className="border border-dark-subtle text-center mt-2"  id="InputResult" placeholder="Enter Result" 
-             value = {value} onChange={onChange} autoComplete = "off"/>
-          <Button variant="info" className="btn btn-primary mt-3 border border-dark rounded-pill" onClick = {onClick}>Submit</Button>
+            {
+              (props.level === 11)?
+
+                  <input type="text" className="border border-dark-subtle text-center mt-2"  id="InputResult" placeholder="Enter Result" 
+                    value = {value} onChange={onChange} autoComplete = "off"/>
+                    :
+                    <input type="number" className="border border-dark-subtle text-center mt-2"  id="InputResult" placeholder="Enter Result" 
+                      value = {value} onChange={onChange} autoComplete = "off"/>
+
+            }
+              <Button variant="info" className="btn btn-primary mt-3 border border-dark rounded-pill" onClick = {onClick}>Submit</Button>
           </>
         }
           </div>

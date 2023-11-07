@@ -20,7 +20,7 @@ import {Color2} from './constants.jsx'
 
 function App() {
 
-  const [level,setLevel] = useState(13)
+  const [level,setLevel] = useState(1)
   const [task,setTask] = useState(() => {return getTask(level)})
   const [isRightResult,setIsRightResult] = useState(false)
   const [showResult,setShowResult] = useState(false)
